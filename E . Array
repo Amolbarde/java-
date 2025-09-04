@@ -67,3 +67,21 @@ for(int num: number);
 {
  System.out.println(num);
  }
+
+------------------------------------
+🧿 for-each loop
+ 
+- syntax 
+
+for (type variable : arrayname) {
+  // code block to be executed
+}
+
+
+- example 
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+
+for (String car : cars) {
+  System.out.println(car);
+}
