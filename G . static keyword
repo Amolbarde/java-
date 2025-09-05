@@ -7,7 +7,7 @@
   1) static varible
   2) static method
   3) static block
-
+---------------------------------------------------------
 1) static varible
  - only one copy is created.
  - use for auto increment.
@@ -18,7 +18,19 @@
 2) static method(call without object)
  -Static method can be called using the class name.
  -It cannot access non-static (normal) variables directly.
+----------------------------------------------------------
+* calling static method
+1) directly calling witthout class and object
+--> add(11,22);
 
+2) using class name
+-->classname.function_name(value)
+-->demo.add(11,33);
+
+3) using object
+-->object_name.function_name(value);
+--> ob.add(100,44);
+---------------------------------------------------------
  * syntax--> static returntype methodname(arg list)
              {
               //code
