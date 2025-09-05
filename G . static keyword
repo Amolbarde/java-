@@ -1,0 +1,17 @@
+
+
+-static is keyword in java
+-static means fix (only one copy is created)
+-In Java, static means something belongs to the class, not to the object.
+-there are three use of static 
+  1) static varible
+  2) static method
+  3) static block
+
+1) static varible
+ - only one copy is created.
+ - use for auto increment.
+
+* syntax--> static datatype varible;
+* Example-->static int a;
+
