@@ -14,6 +14,8 @@
 
 * syntax--> static datatype varible;
 * Example-->static int a;
+---------------------------------------------------------
+--------------------------------------------------------
 
 2) static method(call without object)
  -Static method can be called using the class name.
@@ -48,3 +50,12 @@ public class Test {
         MyClass.greet();  // No object needed
     }
 }
+---------------------------------------------------------
+---------------------------------------------------------
+3) static block
+ -Static block runs automatically when the class is loaded.
+ -It runs before the main method.
+* syntax
+--> static{
+            //code
+         }
