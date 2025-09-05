@@ -15,3 +15,24 @@
 * syntax--> static datatype varible;
 * Example-->static int a;
 
+2) static method(call without object)
+ -Static method can be called using the class name.
+ -It cannot access non-static (normal) variables directly.
+
+ * syntax--> static returntype methodname(arg list)
+             {
+              //code
+             }
+ * Example-->
+
+      class MyClass {
+    static void greet() {
+        System.out.println("Hello!");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        MyClass.greet();  // No object needed
+    }
+}
