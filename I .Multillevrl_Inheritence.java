@@ -40,3 +40,6 @@ public class Geeks {
         a.sound();  
     }
 }
+//dog barks
+//Cat meows
+//Cow moos
