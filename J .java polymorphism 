@@ -1,0 +1,68 @@
+
+
+🧿 Polymorphism
+
+🔑 Meaning of Polymorphism
+👉 Poly = many
+👉 Morphism = forms
+So Polymorphism = One thing, many forms
+
+Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritanc
+
+For example, think of a superclass called Animal that has a method called animalSound(). Subclasses of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.):
+
+------------------------------------
+✨ Two Types of Polymorphism
+
+1. Compile-time (Method Overloading)
+Same method name, different parameters.
+Decided at compile time.
+
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator c = new Calculator();
+        System.out.println(c.add(2, 3));       // calls int version
+        System.out.println(c.add(2.5, 3.5));   // calls double version
+    }
+}
+------------------------------------
+
+2. Runtime (Method Overriding)
+Same method name, same parameters, but in child class.
+
+class Animal {
+    void sound() {
+        System.out.println("Some sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Bark");
+    }
+}
+
+class Cat extends Animal {
+    void sound() {
+        System.out.println("Meow");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal a1 = new Dog(); // reference = Animal, object = Dog
+        Animal a2 = new Cat();
+
+        a1.sound();  // Bark
+        a2.sound();  // Meow
+    }
+}
