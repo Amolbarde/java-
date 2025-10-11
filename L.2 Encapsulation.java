@@ -9,3 +9,8 @@ public class Person {
         this.nm = name;
     }
 }
+
+// 🧠 Trick to Remember Encapsulation:
+// 🔒 “Private lock, public key”
+// private = locked data (can't be accessed directly)
+// get / set = key to open or change it
