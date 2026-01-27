@@ -1,0 +1,13 @@
+*super
+ -In Java, the super keyword is used to refer to the parent class of a subclass.
+ -It can be used in two main ways:
+   1)To access attributes and methods from the parent class  
+   2)To call the parent class constructor
+
+*Access Parent Attributes
+-You can also use super to access an attribute from the parent class if they have an attribute with the same name:
+
+* Main use of super keyword-
+ 1) Access base class method
+ 2) Access base class members
+ 3) Access base class parametrize constroctuer

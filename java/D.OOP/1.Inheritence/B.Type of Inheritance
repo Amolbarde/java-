@@ -1,0 +1,125 @@
+
+
+🧿 types of inheritance 
+ 
+1) Single Inheritance 
+  - single parent class and single child class
+
+------------------------------------
+
+2) Multilevel Inheritance 
+ - only one main class only one derived class and one or more intermidiate class
+- it's aslo called chain of classes 
+ 
+class A
+{ }
+class b extends A
+{}
+class c extends b
+{}
+
+------------------------------------
+
+3) Hierarchical Inheritance 
+ - multiple classes inherit same base class 
+
+class A
+{}
+class b extends A
+{}
+class c extends A
+{}
+
+------------------------------------
+
+4) Multiple Inheritance ❌
+(👉👉 not supported in inheritance)
+-one class inherit from two or more classes
+- Achieve using Interface 
+
+❌ Why not supported ?
+    - java avoide Multiple Inheritance with classes to prevent the diamond problem, where the compiler cannot decide which superclass method to inherit 
+
+------------------------------------
+💥 Example 
+
+interface printable
+{
+ void print();
+}
+interface showable()
+{
+  void show();
+}
+
+class documents implements printable,showable 
+{
+  public void print()
+  { 
+    System.out.println("doc printing...");
+   }
+  
+ public void show()
+   {
+     System.out.println("doc showings...");
+    }
+}
+class Main
+{
+ public static void main (String abc[])
+ {
+   documents on=new documents();
+   on.print();
+   on.show();
+ }
+}
+
+------------------------------------
+
+5) Hybrid inheritance 
+ - combination of two or more type of inheritance 
+
+💥 Example 
+ 
+interface A
+{
+ void A();
+}
+
+interface B
+{
+ void B();
+}
+
+class c
+{
+ void c()
+ {
+  System.out.println("Method from class c");
+ }
+}
+
+class d extendes c implements A,B
+{
+ public void A()
+{
+  System.out.println("Method from interface A");
+}
+
+public void B()
+{
+ System.out.println("Method from inheritance B");
+}
+}
+
+class Main
+{
+ public static void main (String abc[])
+ {
+  d obj=new d();
+  d.A();
+  d.B(); 
+  d.c();
+ }
+  
+}

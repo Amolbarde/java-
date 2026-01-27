@@ -1,0 +1,7 @@
+Conditions and if statements let you control the flow of your program - deciding which code runs, and which code is skipped.
+
+Think of it like real life: If it rains, take an umbrella. Otherwise, do nothing.
+
+Every if statement needs a condition that results in true or false.
+
+This means if statements work hand-in-hand with boolean values:
