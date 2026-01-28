@@ -1,0 +1,126 @@
+import java.util.Scanner;
+
+class Book {
+    int bookId;
+    String title;
+    String author;
+    boolean isIssued;
+}
+
+public class LibraryManagement {
+
+    static Book[] books = new Book[100];
+    static int count = 0;
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        int choice;
+
+        do {
+            System.out.println("\n===== LIBRARY MANAGEMENT SYSTEM =====");
+            System.out.println("1. Add Book");
+            System.out.println("2. Display Books");
+            System.out.println("3. Issue Book");
+            System.out.println("4. Return Book");
+            System.out.println("5. Exit");
+            System.out.print("Enter choice: ");
+
+            choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    addBook();
+                    break;
+                case 2:
+                    displayBooks();
+                    break;
+                case 3:
+                    issueBook();
+                    break;
+                case 4:
+                    returnBook();
+                    break;
+                case 5:
+                    System.out.println("Library Closed");
+                    break;
+                default:
+                    System.out.println("Invalid Choice");
+            }
+        } while (choice != 5);
+    }
+
+    static void addBook() {
+        Book b = new Book();
+
+        System.out.print("Enter Book ID: ");
+        b.bookId = sc.nextInt();
+
+        sc.nextLine(); // buffer clear
+        System.out.print("Enter Book Title: ");
+        b.title = sc.nextLine();
+
+        System.out.print("Enter Author Name: ");
+        b.author = sc.nextLine();
+
+        b.isIssued = false;
+
+        books[count] = b;
+        count++;
+
+        System.out.println("Book Added Successfully");
+    }
+
+    static void displayBooks() {
+        if (count == 0) {
+            System.out.println("No Books Available");
+            return;
+        }
+
+        System.out.println("\nID\tTitle\tAuthor\tStatus");
+        for (int i = 0; i < count; i++) {
+            System.out.println(
+                books[i].bookId + "\t" +
+                books[i].title + "\t" +
+                books[i].author + "\t" +
+                (books[i].isIssued ? "Issued" : "Available")
+            );
+        }
+    }
+
+    static void issueBook() {
+        System.out.print("Enter Book ID to Issue: ");
+        int id = sc.nextInt();
+
+        for (int i = 0; i < count; i++) {
+            if (books[i].bookId == id) {
+                if (!books[i].isIssued) {
+                    books[i].isIssued = true;
+                    System.out.println("Book Issued Successfully");
+                } else {
+                    System.out.println("Book Already Issued");
+                }
+                return;
+            }
+        }
+        System.out.println("Book Not Found");
+    }
+
+    static void returnBook() {
+        System.out.print("Enter Book ID to Return: ");
+        int id = sc.nextInt();
+
+        for (int i = 0; i < count; i++) {
+            if (books[i].bookId == id) {
+                if (books[i].isIssued) {
+                    books[i].isIssued = false;
+                    System.out.println("Book Returned Successfully");
+                } else {
+                    System.out.println("Book Was Not Issued");
+                }
+                return;
+            }
+        }
+        System.out.println("Book Not Found");
+    }
+}
