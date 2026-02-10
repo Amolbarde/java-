@@ -20,7 +20,7 @@ class Emp
         System.out.println(" emp sal="+sal);
     }
 }
-class demo
+class constructor
 {
     public static void main(String abc[])
     {

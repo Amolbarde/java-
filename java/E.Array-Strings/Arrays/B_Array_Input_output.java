@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Array_Input_output 
+public class B_Array_Input_output 
 {
  public static void main(String[] args) 
  {
