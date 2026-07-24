@@ -1,6 +1,6 @@
 package javaCollections;
 import java.util.*;
-public ArrayList List
+public class ArrayList
 {
  public static void main(String[] args)
  {
@@ -14,10 +14,13 @@ public ArrayList List
   a.set(1,"Amol");
   System.out.println(a);
   
-  //print using simple way
-  System.out.println("size ="+a.size());
   
-  //print uising loop
+  System.out.println("size ="+a.size());
+
+  System.out.println("simple way");
+  System.out.println(a);
+  
+  System.out.println("print using loop");
   for(int i = 0;i<a.size();i++)
   {
    System.out.println(a.get(i));
